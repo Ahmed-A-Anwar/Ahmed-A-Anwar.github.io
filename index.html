@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ahmed Amr Mohamed Anwar — Cybersecurity & IT Student</title>
+  <meta name="description" content="Cybersecurity & IT Student. Portfolio showcasing certifications, projects, CTFs, and contact information.">
+
+  <!-- Fonts: Inter (400,600) and JetBrains Mono for code -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary">
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#ctfs">CTFs & Competitions</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <h1 id="typed-name" class="name" aria-live="polite">Ahmed Amr Mohamed Anwar</h1>
+        <p class="title title-reveal">Cybersecurity & IT Student</p>
+        
+        <div class="hero-actions">
+          <a class="btn btn-outline" href="http://github.com/Ahmed-A-Anwar" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-outline" href="http://linkedin.com/in/ahmed-a-anwar" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-primary" href="assets/CV.pdf" download>Download CV (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-sub">Selected CompTIA certifications. Click a badge to view verification.</p>
+        <div class="cert-grid" role="list">
+          <a class="cert-card" href="https://www.credly.com/badges/a8592b62-8dd9-4aaa-9e4c-5433ddd3eef1" target="_blank" rel="noopener" role="listitem">
+                      <img src="assets/ITF+.jfif" alt="Badge for CompTIA IT Fundamentals (ITF+)" class="cert-badge">
+            <div class="cert-info">
+                        <div class="cert-name">CompTIA IT Fundamentals (ITF+)</div>
+                        <div class="cert-date">Issued: July 2025</div>
+            </div>
+          </a>
+
+          <a class="cert-card" href="https://www.credly.com/badges/2e69c92b-b444-4915-9689-5c3585f3b7c3" target="_blank" rel="noopener" role="listitem">
+                      <img src="assets/Network+.jfif" alt="Badge for CompTIA Network+ (N10-009)" class="cert-badge">
+            <div class="cert-info">
+                        <div class="cert-name">CompTIA Network+ (N10-009)</div>
+                        <div class="cert-date">Issued: September 2026</div>
+            </div>
+          </a>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-list">
+
+          <article class="project-card">
+                      <h3 class="project-name">Home Network Security Project</h3>
+                      <p class="project-desc">Repurposed legacy hardware (Intel Core i2 Duo, 2GB RAM) into an Ubuntu Linux server.<br>
+                         Deployed Pi-hole for network-wide ad and tracker blocking and Configured WireGuard VPN for secure remote access.<br> 
+                         I had to Set up static IP, SSH remote administration, and UFW firewall rules.</p>
+            <div class="project-meta">
+                        <span class="tech">Ubuntu</span>
+                        <span class="tech">WireGuard</span>
+                        <span class="tech">Pi-hole</span>
+                        <a class="repo" href="https://github.com/Ahmed-A-Anwar/self-hosted-dns-vpn-server" target="_blank" rel="noopener">Repo / Write-up</a>
+                      </div>
+                    </article>
+
+          <article class="project-card">
+                      <h3 class="project-name">E-Commerce Management System - ASP.NET MVC</h3>
+                      <p class="project-desc">Engineered a full-stack e-commerce management system (ASP.NET MVC, C#, SQL Server) to streamline product catalog management, inventory tracking, and order processing.<br> Designed a relational database schema with 5+ core entities and implemented server-side security practices to protect application data.</p>
+            <div class="project-meta">
+                        <span class="tech">ASP.NET MVC</span>
+                        <span class="tech">C#</span>
+                        <span class="tech">SQL Server</span>
+                        <a class="repo" href="https://github.com/Ahmed-A-Anwar/ECMSapp" target="_blank" rel="noopener">Repo / Write-up</a>
+                      </div>
+                    </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTFs, Hackathons & Competitions -->
+    <section id="ctfs" class="section">
+      <div class="container">
+        <h2 class="section-title">CTFs, Hackathons & Competitions</h2>
+        <div class="events-list">
+          <div class="event-card">
+                      <div class="event-header">
+                        <strong>Cyberus CTF</strong>
+                        <span class="event-date">2025</span>
+                      </div>
+                      <p class="event-desc">Placed 4th out of 10+ teams in a university-level Capture the Flag competition as part of a 5-member team, specializing in reverse engineering.</p>
+                    </div>
+
+          <div class="event-card">
+            <div class="event-header">
+                        <strong>Microsoft Copilot Challenge from Noventiq &amp; Microsoft</strong>
+                        <span class="event-date">2026</span>
+            </div>
+                      <p class="event-desc">2nd Place. Engineered optimized AI prompts to solve real-world scenarios.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <p>Feel free to reach out - open to work.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:ahmedanwar121232@gmail.com">Email me</a>
+          <div class="social">
+            <a href="http://github.com/Ahmed-A-Anwar" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+            <a href="http://linkedin.com/in/ahmed-a-anwar" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Ahmed Amr Mohamed Anwar - Cybersecurity &amp; IT Student</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

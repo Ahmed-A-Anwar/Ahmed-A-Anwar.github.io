@@ -1,0 +1,166 @@
+/* Dark Professional palette
+   Background: #0F172A
+   Surfaces: #1E293B
+   Primary text: #E2E8F0
+   Secondary text: #94A3B8
+   Accent: #38BDF8
+   Fonts: Inter (400,600); JetBrains Mono for code
+*/
+:root{
+  --bg:#0F172A;
+  --surface:#1E293B;
+  --text:#E2E8F0;
+  --muted:#94A3B8;
+  --accent:#38BDF8;
+  --radius:10px;
+  --container:1100px;
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  font-weight:400;
+}
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 1rem;
+}
+
+a{color:var(--accent);text-decoration:none}
+a:focus{outline:2px solid rgba(56,189,248,0.22);outline-offset:3px}
+
+/* Header */
+.site-header{background:transparent;padding:1rem 0;border-bottom:1px solid rgba(226,232,240,0.04)}
+.header-inner{display:flex;align-items:center;justify-content:flex-end;gap:1rem}
+.menu-toggle{display:none;background:transparent;border:1px solid rgba(226,232,240,0.04);color:var(--muted);padding:.4rem .6rem;border-radius:6px}
+.primary-nav{display:flex;align-items:center;justify-content:flex-end;gap:1rem;margin-left:auto}
+.primary-nav a{color:var(--muted);font-size:.95rem;padding:0.35rem 0.55rem;border-radius:6px;transition:color .2s ease, transform .2s ease, background-color .2s ease, box-shadow .2s ease}
+.primary-nav a:hover{color:var(--text);background:rgba(56,189,248,0.05);transform:translateY(-1px);box-shadow:0 8px 18px rgba(56,189,248,0.04)}
+
+/* Hero */
+.hero{padding:3.5rem 0;background:linear-gradient(180deg, rgba(15,23,42,0.0), rgba(15,23,42,0.0));}
+.hero-inner{max-width:720px}
+.name{font-size:2.25rem;margin:0 0 .25rem;font-weight:600;display:inline-block;white-space:nowrap;border-right:2px solid rgba(56,189,248,0.8);padding-right:0.08em;min-height:1.2em;animation:cursor-blink 0.9s steps(1,end) infinite;}
+.name.is-finished{border-color:transparent;animation:none}
+@keyframes cursor-blink{0%,49%{border-color:rgba(56,189,248,0.8)}50%,100%{border-color:transparent}}
+.title{color:var(--muted);margin:0 0 .75rem;opacity:0;transform:translateY(10px);transition:opacity 0.5s ease, transform 0.5s ease;transition-delay:0.4s}
+.title.title-reveal.is-visible{opacity:1;transform:translateY(0)}
+.tagline{color:var(--muted);margin-bottom:1rem}
+.hero-actions{display:flex;gap:.6rem;flex-wrap:wrap}
+
+.btn{display:inline-block;padding:.6rem .9rem;border-radius:8px;font-weight:600;font-size:.95rem}
+.btn-outline{border:1px solid rgba(226,232,240,0.06);color:var(--text);background:transparent}
+.btn-primary{background:var(--accent);color:#022; border:0}
+
+/* Sections */
+.section{padding:2.25rem 0}
+.section-title{font-size:1.25rem;margin:0 0 .5rem;font-weight:600}
+.section-sub{color:var(--muted);margin:0 0 1rem}
+main > section{transition:opacity var(--anim-duration) ease, transform var(--anim-duration) ease}
+
+
+/* Cards and grids */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.cert-card{display:flex;align-items:center;gap:0.75rem;padding:.75rem;background:var(--surface);border-radius:10px;color:var(--text);text-decoration:none}
+.cert-badge{width:56px;height:56px;flex:0 0 56px;border-radius:10px;background:#0b1220;border:1px solid rgba(226,232,240,0.08);box-shadow:0 8px 20px rgba(15,23,42,0.32);object-fit:cover;transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease, filter .28s ease}
+.cert-card:hover .cert-badge{transform:scale(1.04) translateY(-1px);box-shadow:0 12px 24px rgba(56,189,248,0.08);border-color:rgba(56,189,248,0.26);filter:saturate(1.04)}
+.cert-info{font-size:.95rem}
+.cert-name{font-weight:600}
+.cert-date{color:var(--muted);font-size:.86rem}
+
+.projects-list{display:grid;gap:1rem}
+.project-card{padding:1rem;background:var(--surface);border-radius:10px}
+.project-name{margin:0 0 .4rem;font-weight:600}
+.project-desc{margin:0 0 .6rem;color:var(--muted)}
+.project-meta{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+.tech{background:rgba(226,232,240,0.03);color:var(--muted);padding:.2rem .5rem;border-radius:6px;font-size:.85rem}
+.repo{margin-left:auto;color:var(--accent)}
+
+.events-list{display:grid;gap:1rem}
+.event-card{padding:1rem;background:var(--surface);border-radius:10px}
+.event-header{display:flex;justify-content:space-between;align-items:center}
+.event-desc{margin:.5rem 0 0;color:var(--muted)}
+.event-links a{color:var(--accent)}
+
+/* Contact */
+.contact-section .contact-actions{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap}
+.social a{color:var(--muted);margin-left:.5rem}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(226,232,240,0.03);padding:1rem 0;color:var(--muted)}
+
+/* Accessibility and small details */
+[role="list"]{list-style:none;padding:0;margin:0}
+
+/* Mobile-first responsiveness */
+@media(min-width:700px){
+  .hero{padding:4.5rem 0}
+  .name{font-size:2.75rem}
+  .primary-nav{gap:1.25rem}
+}
+
+@media(max-width:699px){
+  .primary-nav{display:none}
+  .menu-toggle{display:inline-block}
+}
+
+/* Code style */
+code, pre{font-family: 'JetBrains Mono', monospace;color:var(--accent);background:transparent}
+
+/* Keep visuals simple and deliberate: no gradients, no glass, no neon beyond the single accent color */
+
+/* Animation tokens */
+:root{--anim-duration:0.6s}
+
+/* Entrance animations: fade in + slight slide up */
+.animate{
+  opacity:0;
+  transform:translateY(12px);
+  transition:opacity var(--anim-duration) cubic-bezier(.2,0,.0,1), transform var(--anim-duration) cubic-bezier(.2,0,.0,1);
+  transition-delay:var(--delay, 0s);
+  will-change:opacity,transform;
+}
+.animate.in-view{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Subtle hover lift + soft accent shadow for cards */
+.cert-card, .project-card, .event-card{
+  transition:transform 0.32s cubic-bezier(.2,.9,.2,1), box-shadow 0.32s ease;
+}
+.cert-card:hover, .project-card:hover, .event-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(56,189,248,0.06);
+}
+
+/* Button transitions and hover */
+.btn{
+  transition:transform 0.18s ease, background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+  will-change:transform,background-color;
+}
+.btn:hover{
+  transform:scale(1.03);
+}
+.btn-primary:hover{
+  filter:brightness(0.95);
+}
+
+/* Stagger helpers: use --delay set from JS */
+.stagger-child{ /* marker class */ }
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce){
+  :root{--anim-duration:0s}
+  .animate, .cert-card, .project-card, .event-card, .btn{transition:none!important;transform:none!important}
+}
+
